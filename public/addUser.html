@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Add a user</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div id="message"></div>
+  <h2>Please add a new user</h2>
+
+  <form method="post" action="/exam/addUser">
+    <div style="float:left; width: 200px;">User name</div>
+      <input type="text" name="username" placeholder="user name"><br>
+    <div style="float:left; width: 200px;">&nbsp;</div>
+      <label><input type="radio" name="isAdmin" value="student" checked> student</label>
+      <label><input type="radio" name="isAdmin" value="admin"> admin</label><br>
+    <div style="float:left; width: 200px;">Password</div>
+      <input type="password" name="password" placeholder="Password"><br>
+    <br><div style="float:left; width: 200px;">&nbsp;</div>
+      <input type="submit" value="Submit the user information">
+  </form>
+
+  <br><a href="/exam/admin">Back to Main Administrative Page</a><br>
+
+  <script>
+    const msg = new URLSearchParams(window.location.search).get("message");
+    if (msg) document.getElementById("message").innerText = msg;
+  </script>
+</body>
+</html>

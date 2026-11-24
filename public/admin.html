@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"> 
+
+  <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19?dev",
+          "react-dom": "https://esm.sh/react-dom@19?dev",
+          "react-dom/client": "https://esm.sh/react-dom@19/client?dev"
+        }
+      }
+  </script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin="anonymous"></script>
+ 
+</head>
+
+<body> 
+  <h2> Main Administrative Page</h2>
+
+  <a href="/exam/addAssignment">Add an assignment</a><br>
+  <a href="/exam/addUser">Add a user (student or admin)</a><br>
+  <a href="/exam/logout">Log out</a><br>
+
+  
+  <h2>Welcome Administrator <span id="whoami"></span>!</h2>
+  <script src="/javascripts/whoami.js" type="text/babel" data-type="module"></script> 
+
+</body>
+</html>
